@@ -1,0 +1,21 @@
+{% include 'promotions/partials/head.html' %}
+  <body>
+    <h1>Produtos</h1>
+
+    <main class="main-products-list-container">
+      {% for product in products %}
+      <a href="product-detail/{{product.id}}">
+        <div class="product-container">
+          <img src="{{product.image.url}}" alt="" />
+  
+          <div class="product-detail">
+            <h2>{{product.title}}</h2>
+  
+            <p>R$ <span>{{product.price}}</span></p>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </main>
+  </body>
+</html>
